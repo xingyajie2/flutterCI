@@ -8,11 +8,11 @@ jobs:
     runs-on: macos-latest
     
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       #三方flutter的Action，它可以在服务器配置一个Flutter环境
-      - uses: subosito/flutter-action@v1
+      - uses: subosito/flutter-action@v3
         with:
-          flutter-version: '3.0.1'
+          flutter-version: '3.0.2'
           channel: 'stable'
       #想让我们CI做的事情！
       - run: cd flutter_module && flutter build ios-framework --cocoapods --output=../NativeDemo/Flutter 
